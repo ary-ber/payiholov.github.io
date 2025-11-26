@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Conjugation Table</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #myInput {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        #myTable {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        /* General header style */
+        #myTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #04AA6D;
+            color: white;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        /* Style for the second header row (sub-titles) */
+        #myTable thead tr:nth-child(2) th {
+            background-color: #00795c;
+        }
+
+        /* Center titles for Columns 2 and 3 */
+        #myTable thead tr:first-child th:nth-child(2),
+        #myTable thead tr:last-child th {
+            text-align: center;
+        }
+
+        /* Main table data cell style */
+        #myTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            vertical-align: top;
+            /* Default text-align is usually left, but we need to override it below */
+        }
+
+        /* 🌟 KEY CHANGE: Center content in columns 2 and 3 🌟 */
+        /* Targets the 2nd and 3rd data cells (td) in every row */
+        #myTable tbody td:nth-child(2),
+        #myTable tbody td:nth-child(3) {
+            text-align: center;
+        }
+
+        #myTable tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Աս Արեւմտահայերէն բայը ի՞նչ հոլով կ՚առնէ։ Which case does this Western Armenian verb take ?</h1>
+
+    <input type="text" id="myInput" onkeyup="filterTable()" placeholder="Փնտռէ բայը…" title="Type in a value">
+
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th rowspan="2"> </th>
+
+                <th colspan="2" style="text-align: center;">Conjugation Forms</th>
+            </tr>
+            <tr>
+                <th style="text-align: center;">Եզակի</th>
+                <th style="text-align: center;">Յոգնակի</th>
+            </tr>
+        </thead>
+        <tbody id="myTableBody">
+            <tr><td colspan="3">Loading data...</td></tr>
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

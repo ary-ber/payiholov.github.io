@@ -1,0 +1,17 @@
+verbs:
+  - name: Սիրել
+    type: accusative # հայցական
+    first_person_present: կը սիրեմ
+  - name: Տեղեկացնել
+    type: dative # տրական
+    first_person_present: կը տեղեկացնեմ
+  - name: Տալ
+    type: dative
+    first_person_present: կու տամ
+  - name: Ղրկել
+    type: dative
+    first_person_present: կը ղրկեմ
+  - name: Հրաւիրել
+    type: accusative
+    first_person_present: կը հրաւիրեմ
+# ...
