@@ -14,4 +14,7 @@ verbs:
   - name: Հրաւիրել
     type: accusative
     first_person_present: կը հրաւիրեմ
+  - name: Սորվեցնել
+    type: dative
+    first_person_present: կը սորվեցնեմ
 # ...
